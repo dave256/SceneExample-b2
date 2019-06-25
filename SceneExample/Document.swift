@@ -13,7 +13,17 @@ class Document: UIDocument {
     static let openDocActivityType = "com.dave256apps.SceneExample.openDocActivity"
     static let openDocTitle = "openDoc"
     static let openDocURLKey = "openDocURL"
-    
+
+    var openDocumentActivity: NSUserActivity {
+        // Create an NSUserActivity for our document.
+        // Note: The activityType string below must be included in your Info.plist file under the `NSUserActivityTypes` array.
+        // More info: https://developer.apple.com/documentation/foundation/nsuseractivity
+        let userActivity = NSUserActivity(activityType: Document.openDocActivityType)
+        userActivity.title = Document.openDocTitle
+        userActivity.userInfo = [Document.openDocURLKey: fileURL]
+        return userActivity
+    }
+
     override func contents(forType typeName: String) throws -> Any {
         // Encode your document with an instance of NSData or NSFileWrapper
         return Data()
