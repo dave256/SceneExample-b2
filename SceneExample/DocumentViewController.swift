@@ -34,3 +34,11 @@ class DocumentViewController: UIViewController {
         }
     }
 }
+
+extension DocumentViewController {
+    static func loadFromStoryboard() -> DocumentViewController? {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        return storyboard.instantiateViewController(withIdentifier: "DocumentViewController") as? DocumentViewController
+    }
+
+}

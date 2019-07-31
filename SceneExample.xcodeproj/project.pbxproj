@@ -14,6 +14,7 @@
 		039B570522C2946500374627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039B570322C2946500374627 /* Main.storyboard */; };
 		039B570722C2946800374627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 039B570622C2946800374627 /* Assets.xcassets */; };
 		039B570A22C2946800374627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039B570822C2946800374627 /* LaunchScreen.storyboard */; };
+		039B571222C2950400374627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B571122C2950400374627 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		039B570622C2946800374627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		039B570922C2946800374627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		039B570B22C2946800374627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		039B571122C2950400374627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				039B56FB22C2946500374627 /* AppDelegate.swift */,
+				039B571122C2950400374627 /* SceneDelegate.swift */,
 				039B56FD22C2946500374627 /* DocumentBrowserViewController.swift */,
 				039B56FF22C2946500374627 /* DocumentViewController.swift */,
 				039B570122C2946500374627 /* Document.swift */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039B571222C2950400374627 /* SceneDelegate.swift in Sources */,
 				039B570222C2946500374627 /* Document.swift in Sources */,
 				039B570022C2946500374627 /* DocumentViewController.swift in Sources */,
 				039B56FE22C2946500374627 /* DocumentBrowserViewController.swift in Sources */,

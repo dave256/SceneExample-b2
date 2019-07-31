@@ -9,6 +9,10 @@
 import UIKit
 
 class Document: UIDocument {
+
+    static let openDocActivityType = "com.dave256apps.SceneExample.openDocActivity"
+    static let openDocTitle = "openDoc"
+    static let openDocURLKey = "openDocURL"
     
     override func contents(forType typeName: String) throws -> Any {
         // Encode your document with an instance of NSData or NSFileWrapper
