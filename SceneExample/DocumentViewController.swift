@@ -21,11 +21,29 @@ class DocumentViewController: UIViewController {
         document?.open(completionHandler: { (success) in
             if success {
                 // Display the content of the document, e.g.:
+                print("key name", Document.userActivityURLKey)
                 self.documentNameLabel.text = self.document?.fileURL.lastPathComponent
+                if let activity = self.document?.userActivity, let userInfo = activity.userInfo {
+                    if let url = userInfo[Document.userActivityURLKey] {
+                        print(url)
+                    } else {
+                        print("no key")
+                    }
+                }
             } else {
                 // Make sure to handle the failed import appropriately, e.g., by presenting an error message to the user.
             }
         })
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        view.window?.windowScene?.userActivity = document?.userActivity
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.window?.windowScene?.userActivity = nil
     }
     
     @IBAction func dismissDocumentViewController() {
