@@ -14,6 +14,8 @@ class Document: UIDocument {
     static let openDocTitle = "openDoc"
     static let openDocURLKey = "openDocURL"
 
+    // override class let userActivityURLKey = "userActivityURLKey"
+
     var openDocumentActivity: NSUserActivity {
         // Create an NSUserActivity for our document.
         // Note: The activityType string below must be included in your Info.plist file under the `NSUserActivityTypes` array.
